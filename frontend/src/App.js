@@ -277,39 +277,37 @@ const Dashboard = () => {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Dashboard Overview</h2>
                 
-                {stats && (
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                    <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-6 text-white">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-blue-100">Total Members</p>
-                          <p className="text-3xl font-bold">{stats.total_members}</p>
-                        </div>
-                        <div className="text-4xl opacity-80">👥</div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-6 text-white">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-blue-100">Total Members</p>
+                        <p className="text-3xl font-bold">{stats?.total_members || 0}</p>
                       </div>
-                    </div>
-                    
-                    <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 text-white">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-green-100">Societies</p>
-                          <p className="text-3xl font-bold">{stats.total_societies}</p>
-                        </div>
-                        <div className="text-4xl opacity-80">🏛️</div>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl p-6 text-white">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-purple-100">Organizations</p>
-                          <p className="text-3xl font-bold">{stats.total_organizations}</p>
-                        </div>
-                        <div className="text-4xl opacity-80">🌟</div>
-                      </div>
+                      <div className="text-4xl opacity-80">👥</div>
                     </div>
                   </div>
-                )}
+                  
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-6 text-white">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-green-100">Societies</p>
+                        <p className="text-3xl font-bold">{stats?.total_societies || 6}</p>
+                      </div>
+                      <div className="text-4xl opacity-80">🏛️</div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl p-6 text-white">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-purple-100">Organizations</p>
+                        <p className="text-3xl font-bold">{stats?.total_organizations || 9}</p>
+                      </div>
+                      <div className="text-4xl opacity-80">🌟</div>
+                    </div>
+                  </div>
+                </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div className="bg-gray-50 rounded-xl p-6">
